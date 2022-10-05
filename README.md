@@ -6,7 +6,7 @@ New quote button provide u with a new quote randomly.
 
 <div align="center">
   <h1>
-    <a href="https://app.netlify.com/sites/spiffy-piroshki-a8385f/overview">
+    <a href="https://spiffy-piroshki-a8385f.netlify.app/w">
       >>> Click for Demo <<<
     </a>
   </h1>
@@ -16,7 +16,7 @@ New quote button provide u with a new quote randomly.
 ## Overview
 ![screencapture-localhost-3000-2022-10-05-17_41_35](https://user-images.githubusercontent.com/99952793/194126573-b18c952d-22c7-48af-bd0f-8ff7807059e4.png)
 
-### Built With
+## Built With
   <ul>
       <li>React</li> 
    </ul>
