@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Quote = () => {
+const Quote = ({quote, author, handleClick}) => {
   return (
     <div className='quote-container'>
-        <p>Random Quote</p>
+   <section className='quote'>{quote}</section>
+   <section className='author'>{author}</section>
+   <button className='quote-btn' onClick={handleClick}>Change Quote</button>
     </div>
   )
 }
