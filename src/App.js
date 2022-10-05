@@ -1,7 +1,10 @@
 import React from 'react'
+import Button from '@mui/material/Button';
 import "./App.css"
 import Quote from './Quote'
 import { useState, useEffect } from 'react'
+import library from './images/library.jpg'
+
 
 const App = () => {
   const [quote, setQuote] = useState("")
@@ -16,8 +19,12 @@ const App = () => {
         const dataQuote = data.quotes
         const randomNum = Math.floor(Math.random() * dataQuote.length)
         const currentQuote = dataQuote[randomNum]
-        setQuote(currentQuote.quote)
-        setAuthor(currentQuote.author)
+        console.log(currentQuote.quote.length)
+        if (currentQuote.quote.length < 276) {
+          setQuote(currentQuote.quote)
+          setAuthor(currentQuote.author)
+        }
+
       })
   }
 
@@ -25,11 +32,14 @@ const App = () => {
     getApi()
   }, [])
 
-  
-  return (
-    <div className='app'>
-      <Quote quote={quote} author={author} handleClick={()=>getApi()} />
 
+  return (
+    <div className='app' style={{ backgroundImage: `url(${library})` }}>
+
+      <Quote quote={quote} author={author} />
+      <section className="btn">
+        <Button variant="contained" color="secondary" size="large" style={{ fontSize: 25 }} className='quote-btn' onClick={() => getApi()}>New Quote</Button>
+      </section>
     </div>
   )
 }
