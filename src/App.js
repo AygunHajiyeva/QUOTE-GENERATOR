@@ -19,7 +19,7 @@ const App = () => {
         const dataQuote = data.quotes
         const randomNum = Math.floor(Math.random() * dataQuote.length)
         const currentQuote = dataQuote[randomNum]
-        console.log(currentQuote.quote.length)
+        
         if (currentQuote.quote.length < 276) {
           setQuote(currentQuote.quote)
           setAuthor(currentQuote.author)
